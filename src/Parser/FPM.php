@@ -1,7 +1,6 @@
 <?php
 /**
- * @company MTE Telecom, Ltd.
- * @author Roman Malashin <malashinr@mte-telecom.ru>
+ * @author Deller myogogo@gmail.com
  */
 
 namespace LogAnalyzer\Parser;
@@ -23,7 +22,7 @@ class FPM extends AbstractParser {
         }
 
         $rowsCount = count($rows);
-        for($i = 0; $i< $rowsCount; $i++) {
+        for($i = 0; $i < $rowsCount; $i++) {
 
         }
     }

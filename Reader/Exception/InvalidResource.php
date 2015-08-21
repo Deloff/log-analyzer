@@ -4,9 +4,9 @@
  * @author Roman Malashin <malashinr@mte-telecom.ru>
  */
 
-namespace LogAnalyzer\Rider;
+namespace LogAnalyzer\Reader\Exception;
 
 
-abstract class AbstractRider {
+class InvalidResource  extends \Exception {
 
 }

@@ -7,15 +7,27 @@ return [
     'logAnalyzer' => [
         'service' => [
             'fpm' => [
-                'errors' => [],
-                'access' => []
+                'errors' => [
+
+                ],
+                'access' => [
+
+                ]
             ],
-            'rabbit' => [],
+            'rabbit' => [
+
+            ],
             'nginx' => [
-                'errors' => [],
-                'access' => []
+                'errors' => [
+
+                ],
+                'access' => [
+
+                ]
             ],
-            'mysql' => [],
+            'mysql' => [
+
+            ],
         ],
     ],
 ];

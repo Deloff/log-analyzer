@@ -17,10 +17,11 @@ abstract class AbstractReader {
 
     /**
      * @param $resource
+     * @throws InvalidResource
      */
     public function __construct($resource)
     {
-        if(empty($resource)) {
+        if(!$resource) {
             throw new InvalidResource('Resource can not be empty');
         }
         $this->setResource($resource);

@@ -3,7 +3,7 @@
  * @author Deller myogogo@gmail.com
  */
 
-class Init {
+class Analyzer {
 
     public function __construct()
     {

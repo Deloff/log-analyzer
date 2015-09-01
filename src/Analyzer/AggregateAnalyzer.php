@@ -6,6 +6,6 @@
 namespace LogAnalyzer\Analyzer;
 
 
-class AggregateAnalyzer {
+class AggregateAnalyzer extends AbstractAnalyzer {
 
 }

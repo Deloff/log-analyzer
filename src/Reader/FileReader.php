@@ -42,7 +42,7 @@ class FileReader extends AbstractReader implements ReaderInterface {
         try {
             $fileObject = $this->getFileObject();
             if (!$fileObject->isFile()) {
-                throw new InvalidResource("Resource must be a file");
+                throw new InvalidResource('Resource must be a file');
             }
             while($fileObject->valid()) {
                 $data .= $fileObject->fgets();
@@ -67,8 +67,8 @@ class FileReader extends AbstractReader implements ReaderInterface {
         try {
             /** @var \SplFileObject $fileObject */
             $fileObject = $this->getFileObject();
-            if (empty($fileObject) || !$fileObject->isFile()) {
-                throw new InvalidResource("Resource must be a file");
+            if (!$fileObject || !$fileObject->isFile()) {
+                throw new InvalidResource('Resource must be a file');
             }
             $fileObject->fseek(0, SEEK_END);
             $key = $fileObject->key();

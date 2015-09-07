@@ -14,6 +14,7 @@ class FPM extends AbstractParser {
      */
     public function parse()
     {
+        $result = [];
         $data = $this->getData();
         $rows = explode(PHP_EOL, $data);
 
@@ -25,5 +26,7 @@ class FPM extends AbstractParser {
         for($i = 0; $i < $rowsCount; $i++) {
 
         }
+
+        return $result;
     }
 }

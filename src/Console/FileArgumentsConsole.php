@@ -6,50 +6,59 @@
 namespace LogAnalyzer\Console;
 
 
-class FileArgumentsConsole extends AbstractArgumentsConsole {
-    /**
-     * @var array
-     */
-    protected $shortArguments = [
-        'f:',
-        'form:'
-    ];
+class FileArgumentsConsole extends AbstractArgumentsConsole implements ConsoleArgumentsInterface {
 
-    protected $longArguments = [
-        'file:',
-        'format:'
-    ];
+    /**
+     * @var string
+     */
+    protected $format = '';
+
+    /**
+     * @var string
+     */
+    protected $file = '';
+
+    /**
+     * @return string
+     */
+    public function getFormat()
+    {
+        return $this->format;
+    }
+
+    /**
+     * @param string $format
+     */
+    public function setFormat($format)
+    {
+        $this->format = $format;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFile()
+    {
+        return $this->file;
+    }
+
+    /**
+     * @param string $file
+     */
+    public function setFile($file)
+    {
+        $this->file = $file;
+        return $this;
+    }
 
     /**
      * @return array
      */
-    public function getShortArguments()
+    public function getOptions()
     {
-        return $this->shortArguments;
+        return get_object_vars($this);
     }
 
-    /**
-     * @param array $shortArguments
-     */
-    public function setShortArguments($shortArguments)
-    {
-        $this->shortArguments = $shortArguments;
-    }
-
-    /**
-     * @return array
-     */
-    public function getLongArguments()
-    {
-        return $this->longArguments;
-    }
-
-    /**
-     * @param array $longArguments
-     */
-    public function setLongArguments($longArguments)
-    {
-        $this->longArguments = $longArguments;
-    }
 
 }

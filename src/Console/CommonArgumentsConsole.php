@@ -6,30 +6,33 @@
 namespace LogAnalyzer\Console;
 
 
-abstract class AbstractArgumentsConsole {
-
-
-
+class CommonArgumentsConsole
+    extends AbstractArgumentsConsole
+    implements ConsoleArgumentsInterface {
+    /**
+     * @var string
+     */
+    protected $type = '';
 
     /**
      * @var string
      */
-    protected $storage = 'file';
+    protected $service = '';
 
     /**
      * @return string
      */
-    public function getStorage()
+    public function getType()
     {
-        return $this->storage;
+        return $this->type;
     }
 
     /**
-     * @param string $storage
+     * @param string $type
      */
-    public function setStorage($storage)
+    public function setType($type)
     {
-        $this->storage = $storage;
+        $this->type = $type;
         return $this;
     }
 
@@ -49,5 +52,14 @@ abstract class AbstractArgumentsConsole {
         $this->service = $service;
         return $this;
     }
+
+    /**
+     * @return array
+     */
+    public function getOptions()
+    {
+        return ['s::t::', ['service::','type::']];
+    }
+
 
 }

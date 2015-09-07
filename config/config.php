@@ -5,10 +5,16 @@
 
 return [
     'logAnalyzer' => [
+        'storage' => [
+          'localFiles' => [],
+        ],
         'service' => [
             'fpm' => [
                 'errors' => [
-
+                    'storageTypes' => [
+                        'localFiles'
+                    ],
+                    'regexp' => '',
                 ],
                 'access' => [
 
